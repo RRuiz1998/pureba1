@@ -29,36 +29,37 @@ public class Theater {
         this.registeredIds = registedIds;
     }
 
+            //Selecciona la sala
+    public String gestion(Vector<Vector<String>> register) {
         
-//    //Llama funciones que el usuario desea
-//    public void gestion (Vector<Vector<String>> register) {
-//        while (true) {
-//            String option = JOptionPane.showInputDialog("""
-//                                                        Estas en el apartado especial para nuestras salas de cine. 
-//                                                        En esta seccion podras elegir que funcion deseas realizar
-//                                                        Para facilidad agregamos un menu de opciones disponibles
-//                                                        
-//                                                        Menu:
-//                                                        1. Crear una reservacion
-//                                                        2. Realizar una actualizacion a la configuraciones
-//                                                        
-//                                                        Digite cualquier otra tecla para salir
-//                                                        
-//                                                        introduzaca la opcion que deseas realizar: """);
-//            
-//            if (option == null || !option.matches("[1-2]")) {
-//                break;
-//            }
-//            switch (option) {
-//                case "1" -> this.reservation(register);
-//                case "2" -> this.updateSettings();
-//            }
-//        }
-//        
-//
-//        
-//        
-//    }
+        String selection = "";
+        
+        String option = JOptionPane.showInputDialog("""
+                                            Indica a cual sala deseas ingresar: 
+                                            
+                                            1. Sala IMAX
+                                            2. Sala VIP
+                                            
+                                            """);
+        
+        if (option == null) {
+            selection = "";
+            return "";
+        }
+
+        if (option.equals("1")) {
+            selection = "IMAX";
+            return selection;
+        }
+        
+        if (option.equals("2")) {
+            selection = "VIP";
+            return selection;
+        }
+        return "";
+    }
+    
+    
         
     
     
@@ -101,49 +102,25 @@ public class Theater {
 
     
     //Modificador de opciones predeterminadas de las salas
-    public void updateSettings() {
-        OUTER:
-        while (true){
+    public String updateSettings(String text) {
+        
            settingsView();
 
-            String specificOption = JOptionPane.showInputDialog("""
-                                                                Perfecto, estas en la seccion para la modificacion de configuraciones
-                                                                En este segmento lograras localizar las distintas opciones que son disponibles de ajustar
-                                                                
-                                                                Indique cual opcion desea modificar: 
-                                                                
-                                                                1. Pelicula 1 
-                                                                2. Pelicula 2 
-                                                                3. Horario de inicio pelicula 1 
-                                                                4. Horario de inicio pelicula 2 
-                                                                5. Spots disponibles en sala
-                                                                
-                                                                Digita cualquier otra tecla para salir""");
+            String option = text;
             
-            if (specificOption == null || !specificOption.matches("[1-5]")) {
-                break;
-            }
-            
-            switch (specificOption) {
-                case "1" -> this.movieOne = JOptionPane.showInputDialog("Introduzca el titulo de la pelicula que sera transmitida en la primer jornada: ");
-                case "2" -> this.movieTwo = JOptionPane.showInputDialog("Introduzca el titulo de la pelicula que sera transmitida en la segunda jornada: ");
-                case "3" -> this.schecudleOne = JOptionPane.showInputDialog("Introduzca el nuevo horario para la primer jornada de peliculas: ");
-                case "4" -> this.scheduleTwo = JOptionPane.showInputDialog("Introduzca el nuevo horario para la segunda jornada de peliculas: ");
-                case "5" -> this.spots = JOptionPane.showInputDialog("Introduzca la cantidad de spots disponibles para la sala (Maximo 30)");
-            }
             JOptionPane.showMessageDialog(null, "Modificacion realizada satisfactoriamente\nTitulo de pelicula 1: "+this.movieOne+"\nTitulo de pelicula 2: "+this.movieTwo+"\nHorario 1: "+this.schecudleOne+"\nHorario 2: "+this.scheduleTwo);
-            break;
-        }
+        
+        return "";
     }
     
     //Settings view
     public void settingsView () {
-        System.out.println("Titulo: "+this.movieOne+" (Sera transmitida en el horario "+this.schecudleOne+")");
-        System.out.println("Titulo: "+this.movieTwo+" (Sera transmitida en el horario "+this.scheduleTwo+")");
-        System.out.println("Inicio de primer tanta: "+this.schecudleOne);
-        System.out.println("inicio de segunda tanta: "+this.scheduleTwo);
-        System.out.println("Cantidad de spots disponible en sala "+this.spots);
-        System.out.println("");
+        JOptionPane.showMessageDialog(null, "Titulo: "+this.movieOne+" (Sera transmitida en el horario "+this.schecudleOne+")\n"
+                + "Titulo: "+this.movieTwo+" (Sera transmitida en el horario "+this.scheduleTwo+")\n"
+                        + "Inicio de primer tanda: "+this.schecudleOne+"\n"
+                                + "Inicio de segunda tanda: "+this.scheduleTwo+"\n"
+                                        + "Cantidad de spots disponible en sala "+this.spots);
+
     }
 
         
