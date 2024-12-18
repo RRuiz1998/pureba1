@@ -220,7 +220,7 @@ public class SistemaDeReservas {
                     panelCC.removeAll();
                     firstPanel.removeAll();
 
-                    panelsSize (firstPanel, secondPanel, thirdPanel);
+                    panelsSize(firstPanel, secondPanel, thirdPanel);
 
                     String inputLabel = """
                                         Has accedido a la seccion de reservaciones!
@@ -358,8 +358,7 @@ public class SistemaDeReservas {
                     panelCC.removeAll();
                     firstPanel.removeAll();
 
-                    panelsSize (firstPanel, secondPanel, thirdPanel);
-
+                    panelsSize(firstPanel, secondPanel, thirdPanel);
 
                     String inputLabel = """
                                         En este menu podras modificar tanto el momento de entrega de la bebida que el empleado selecciono o bien la bebida seleccionada
@@ -605,8 +604,7 @@ public class SistemaDeReservas {
                     panelCC.removeAll();
                     firstPanel.removeAll();
 
-                    panelsSize (firstPanel, secondPanel, thirdPanel);
-
+                    panelsSize(firstPanel, secondPanel, thirdPanel);
 
                     String inputLabel = """
                                         Has ingresado a la seccion para cancelar una reservacion de bebida
@@ -748,8 +746,8 @@ public class SistemaDeReservas {
                     panelCC.removeAll();
                     firstPanel.removeAll();
 
-                    panelsSize (firstPanel, secondPanel, thirdPanel);
-                    
+                    panelsSize(firstPanel, secondPanel, thirdPanel);
+
                     firstPanel.setPreferredSize(new Dimension(500, 120));
 
                     JLabel input = new JLabel("Introduzca el ID del Empleado: ");
@@ -783,7 +781,7 @@ public class SistemaDeReservas {
                     panelCC.removeAll();
                     firstPanel.removeAll();
 
-                    panelsSize (firstPanel, secondPanel, thirdPanel);
+                    panelsSize(firstPanel, secondPanel, thirdPanel);
 
                     firstPanel.setPreferredSize(new Dimension(750, 120));
 
@@ -818,7 +816,7 @@ public class SistemaDeReservas {
                     panelCC.removeAll();
                     firstPanel.removeAll();
                     secondPanel.removeAll();
-                    
+
                     firstPanel.setBorder(null);
 
                     baile.mostrarReservas();
@@ -843,11 +841,11 @@ public class SistemaDeReservas {
                     JLabel title8pm = new JLabel("Lista de Sesion de las 8pm");
                     title8pm.setPreferredSize(new Dimension(400, 25));
                     JLabel label8pm = new JLabel("<html>" + texto8pm.replace("\n", "<br>") + "<html>");
-                    
+
                     JPanel[] panels = {firstPanel, secondPanel};
                     for (JPanel panel : panels) {
-                                            panel.setPreferredSize(new Dimension(400, 400));
-                    panel.setBackground(new Color(0, 255, 0));
+                        panel.setPreferredSize(new Dimension(400, 400));
+                        panel.setBackground(new Color(0, 255, 0));
                     }
 
                     secondPanel.add(title8pm);
@@ -899,8 +897,8 @@ public class SistemaDeReservas {
                     panelCC.removeAll();
                     firstPanel.removeAll();
 
-                    panelsSize (firstPanel, secondPanel, thirdPanel);
-                    
+                    panelsSize(firstPanel, secondPanel, thirdPanel);
+
                     firstPanel.setPreferredSize(new Dimension(500, 120));
 
                     JLabel input = new JLabel("Introduzca el ID del Empleado: ");
@@ -934,7 +932,7 @@ public class SistemaDeReservas {
                     panelCC.removeAll();
                     firstPanel.removeAll();
 
-                    panelsSize (firstPanel, secondPanel, thirdPanel);
+                    panelsSize(firstPanel, secondPanel, thirdPanel);
 
                     firstPanel.setPreferredSize(new Dimension(750, 120));
 
@@ -969,7 +967,7 @@ public class SistemaDeReservas {
                     panelCC.removeAll();
                     firstPanel.removeAll();
                     secondPanel.removeAll();
-                    
+
                     firstPanel.setBorder(null);
 
                     yoga.mostrarReservas();
@@ -994,11 +992,11 @@ public class SistemaDeReservas {
                     JLabel title8pm = new JLabel("Lista de Sesion de las 8pm");
                     title8pm.setPreferredSize(new Dimension(400, 25));
                     JLabel label8pm = new JLabel("<html>" + texto8pm.replace("\n", "<br>") + "<html>");
-                    
+
                     JPanel[] panels = {firstPanel, secondPanel};
                     for (JPanel panel : panels) {
-                                            panel.setPreferredSize(new Dimension(400, 400));
-                    panel.setBackground(new Color(0, 0, 255));
+                        panel.setPreferredSize(new Dimension(400, 400));
+                        panel.setBackground(new Color(0, 0, 255));
                     }
 
                     secondPanel.add(title8pm);
@@ -1030,18 +1028,16 @@ public class SistemaDeReservas {
                 panelCSS.add(titulo);
 
                 JButton buttonA = new JButton("Agregar Estudiante");
-                JButton buttonV = new JButton("Visualizar Clase");
                 JButton buttonC = new JButton("Cancelar Inscripcion");
-                JButton buttonR = new JButton("Reservar con Entrenador");
+                JButton buttonV = new JButton("Visualizar Clase");
 
-                JButton[] buttonsGym = {buttonA, buttonV, buttonC, buttonR};
+                JButton[] buttonsGym = {buttonA, buttonV, buttonC};
 
                 setButtons(buttonsGym);
 
                 panelCSI.add(buttonA);
-                panelCSI.add(buttonV);
                 panelCSI.add(buttonC);
-                panelCSI.add(buttonR);
+                panelCSI.add(buttonV);
 
                 panelCS.add(panelCSS, BorderLayout.CENTER);
                 panelCS.add(panelCSI, BorderLayout.SOUTH);
@@ -1056,7 +1052,9 @@ public class SistemaDeReservas {
                     panelCC.removeAll();
                     firstPanel.removeAll();
 
-                    panelsSize (firstPanel, secondPanel, thirdPanel);
+                    panelsSize(firstPanel, secondPanel, thirdPanel);
+
+                    firstPanel.setPreferredSize(new Dimension(500, 150));
 
                     JLabel input = new JLabel("Introduzca el ID del Empleado: ");
                     JTextField textField = new JTextField(25);
@@ -1089,20 +1087,63 @@ public class SistemaDeReservas {
                     panelCC.removeAll();
                     firstPanel.removeAll();
 
-                    panelsSize (firstPanel, secondPanel, thirdPanel);
+                    panelsSize(firstPanel, secondPanel, thirdPanel);
+
+                    firstPanel.setPreferredSize(new Dimension(500, 150));
 
                     JLabel input = new JLabel("""
                                               Introduzca el ID del Empleado: 
                             
                                               """);
-                    JTextField textFieldInput = new JTextField(25);
+                    JTextField textField = new JTextField(25);
                     JButton confirmationButton = new JButton("Verificar");
                     JButton[] bConfirmation = {confirmationButton};
                     setButtons(bConfirmation);
 
                     firstPanel.add(input);
-                    firstPanel.add(textFieldInput);
+                    firstPanel.add(textField);
                     firstPanel.add(confirmationButton);
+
+                    panelCC.add(firstPanel);
+
+                    panelCentral.add(panelCC);
+
+                    confirmationButton.addActionListener((ActionEvent e1) -> {
+                        String texto = textField.getText();
+                        gimnasio.eliminarEstudiante(texto);
+                        textField.setText("");
+
+                        updateWindiow(frame);
+                    });
+
+                    updateWindiow(frame);
+
+                });
+
+                buttonV.addActionListener((ActionEvent e1) -> {
+
+                    panelCC.removeAll();
+                    firstPanel.removeAll();
+
+                    panelsSize(firstPanel, secondPanel, thirdPanel);
+
+                    firstPanel.setPreferredSize(new Dimension(300, 500));
+                    firstPanel.setBorder(null);
+                    firstPanel.setBackground(Color.red);
+
+                    String labelText = "";
+
+                    for (Vector<String> set : gimnasio.reservationList) {
+                        labelText += set.get(0) + " / " + set.get(2) + "\n";
+                    }
+
+                    JLabel title = new JLabel("Reservaciones realizadas");
+                    title.setPreferredSize(new Dimension(300, 15));
+                    title.setHorizontalAlignment(SwingConstants.CENTER);
+                    JLabel label = new JLabel("<html>" + labelText.replace("\n", "<br>") + "<html>");
+
+                    firstPanel.add(title);
+                    firstPanel.add(label);
 
                     panelCC.add(firstPanel);
 
@@ -1139,227 +1180,19 @@ public class SistemaDeReservas {
 
                 cleaningWindow(panelCentral, panelCS, panelCSS, panelCSI, firstPanel, secondPanel, thirdPanel);
 
-                String tituloCine = """
-                                    
-                                    Bienvenidos a la seccion de reservacion y configuraciones relacionadas a la sala de Cine
-                                    En este apartado especial seras capaz de asignar espacios disponibles a empleados y modificar ajustes. Por favor selecciona la opcion que deseas realizar
-                                        
-                                    """;
+                String gestion = imax.gestion(register);
 
-                JLabel titulo = new JLabel("<html>" + tituloCine.replace("\n", "<br>") + "<html>");
-                titulo.setVerticalAlignment(SwingConstants.CENTER);
+                String sala = "";
 
-                panelCSS.add(titulo);
-
-                panelCSS.add(titulo);
-
-                JButton buttonA = new JButton("Crear Reservacion");
-                JButton buttonM = new JButton("Modificar Informacion");
-
-                JButton[] buttonsCine = {buttonA, buttonM};
-
-                setButtons(buttonsCine);
-
-                panelCSI.add(buttonA);
-                panelCSI.add(buttonM);
-
-                panelCS.add(panelCSS, BorderLayout.CENTER);
-                panelCS.add(panelCSI, BorderLayout.SOUTH);
-
-                panelCentral.add(panelCS, BorderLayout.NORTH);
-
-                    panelsSize (firstPanel, secondPanel, thirdPanel);
-
-                buttonA.addActionListener((ActionEvent e1) -> {
-
-                    panelCC.removeAll();
-                    firstPanel.removeAll();
-
-                    panelsSize (firstPanel, secondPanel, thirdPanel);
-                    
-                    firstPanel.setPreferredSize(new Dimension(600, 150));
-                    secondPanel.setPreferredSize(new Dimension(450, 300));
-                    secondPanel.setBackground(Color.BLUE);
-                    thirdPanel.setPreferredSize(new Dimension(450, 300));
-                    thirdPanel.setBackground(Color.red);
-
-                    JLabel inputID = new JLabel("Introduzca el ID del empleado: ");
-                    JTextField textFieldOne = new JTextField(25);
-                    JLabel inputSpot = new JLabel("Indique el spot que desea reservar: ");
-                    JTextField textFieldTwo = new JTextField(25);
-                    JButton confirmationButton = new JButton("Actualizar");
-                    JButton[] bConfirmation = {confirmationButton};
-                    setButtons(bConfirmation);
-
-                    firstPanel.add(inputID);
-                    firstPanel.add(textFieldOne);
-                    firstPanel.add(inputSpot);
-                    firstPanel.add(textFieldTwo);
-                    firstPanel.add(confirmationButton);
-                                            
-                    String preview = imax.view();
-                    
-                    
-                    
-                    JLabel movieTitle = new JLabel(imax.movieOne);
-                    JLabel spots = new JLabel("<html>" + preview.replace("\n", "<br>") + "<html>");
-                    
-                    spots.setFont(new Font("Arial", Font.PLAIN, 18));
-                    movieTitle.setFont(new Font("Arial", Font.PLAIN, 18));
-                    movieTitle.setPreferredSize(new Dimension(850, 30));
-                    movieTitle.setHorizontalAlignment(SwingConstants.CENTER);
-
-                        
-                    secondPanel.add(movieTitle);
-                    secondPanel.add(spots);
-                        
-                    panelCC.add(firstPanel);
-                    panelCC.add(secondPanel);
-                    panelCC.add(thirdPanel);
-
-                    panelCentral.add(panelCC);
-
-                    confirmationButton.addActionListener((ActionEvent e2) -> {
-                        
-                        secondPanel.removeAll();
-                        
-                        String textoOne = textFieldOne.getText();
-                        String textoTwo = textFieldTwo.getText();
-                        imax.reservation(register, textoOne, textoTwo);
-                        String view = imax.reservation(register, textoOne, textoTwo);
-                        textFieldOne.setText("");
-                        textFieldTwo.setText("");
-                        
-                        JLabel movieTitleOne = new JLabel(imax.movieOne);
-                        JLabel updatedSpots = new JLabel("<html>" + view.replace("\n", "<br>") + "<html>");
-
-                        updatedSpots.setFont(new Font("Arial", Font.PLAIN, 18));
-                        movieTitleOne.setFont(new Font("Arial", Font.PLAIN, 18));
-                        movieTitleOne.setPreferredSize(new Dimension(850, 30));
-                        movieTitleOne.setHorizontalAlignment(SwingConstants.CENTER);
-                        
-                        
-                        
-                        String set = "";
-                        
-                        for (Vector<String> reservedList : imax.reservedList) {
-                                System.out.println(reservedList);
-                                set += reservedList.get(0) + " / " + reservedList.get(2) + "\n";
-                            }
-
-                        if (!(set == null)) {
-
-                            JLabel spotsB = new JLabel("<html>" + set.replace("\n", "<br>") + "<html>");
-
-                            thirdPanel.add(spotsB);
-                        }
-
-                        
-                        
-                        
-                        
-                        
-                        
-
-                        secondPanel.add(movieTitleOne);
-                        secondPanel.add(updatedSpots);
-
-                        panelCC.add(firstPanel);
-                        panelCC.add(secondPanel);
-                        panelCC.add(thirdPanel);
-
-                        panelCentral.add(panelCC);
-
-
-                        updateWindiow(frame);
-                    });
-                    
-                    updateWindiow(frame);
-
-                });
-
-                buttonM.addActionListener((ActionEvent e1) -> {
-
-                    panelCC.removeAll();
-                    firstPanel.removeAll();
-
-                    panelsSize (firstPanel, secondPanel, thirdPanel);
-                    
-                    firstPanel.setPreferredSize(new Dimension(500, 200));
-
-                    JButton movieOne = new JButton("Pelicula 1");
-                    JButton movieTwo = new JButton("Pelicula 2");
-                    JButton scheduleOne = new JButton("Horario 1");
-                    JButton scheduleTwo = new JButton("Horario 2");
-                    JButton spots = new JButton("Spots");
-
-                    String text1 = """
-                                         Perfecto, estas en la seccion para la modificacion de configuraciones
-                                               En este segmento lograras localizar las distintas opciones 
-                                   que son disponibles de ajustar
-                                   
-                                         """;
-
-                    JLabel titulo1 = new JLabel("<html>" + text1.replace("\n", "<br>") + "<html>");
-
-                    firstPanel.add(titulo1);
-                    firstPanel.add(movieOne);
-                    firstPanel.add(movieTwo);
-                    firstPanel.add(scheduleOne);
-                    firstPanel.add(scheduleTwo);
-                    firstPanel.add(spots);
-
-                    JButton[] buttonsMCine = {movieOne, movieTwo, scheduleOne, scheduleTwo, spots};
-
-                    setButtons(buttonsMCine);
-
-                    panelCC.add(firstPanel);
-                    panelCentral.add(panelCC);
-
-                    movieOne.addActionListener((ActionEvent e2) -> {
-
-                        secondPanel.removeAll();
-
-                        JLabel input = new JLabel("Introduzca el titulo de la pelicula que sera transmitida en la primer jornada: ");
-                        theaterOptions(secondPanel, input, panelCC, panelCentral, frame);
-
-                    });
-                    movieTwo.addActionListener((ActionEvent e2) -> {
-
-                        secondPanel.removeAll();
-
-                        JLabel input = new JLabel("Introduzca el titulo de la pelicula que sera transmitida en la segunda jornada: ");
-
-                        theaterOptions(secondPanel, input, panelCC, panelCentral, frame);
-
-                    });
-                    scheduleOne.addActionListener((ActionEvent e2) -> {
-
-                        secondPanel.removeAll();
-
-                        JLabel input = new JLabel("Introduzca el nuevo horario para la primer jornada de pelicula: ");
-                        theaterOptions(secondPanel, input, panelCC, panelCentral, frame);
-
-                    });
-                    scheduleTwo.addActionListener((ActionEvent e2) -> {
-
-                        secondPanel.removeAll();
-
-                        JLabel input = new JLabel("Introduzca el nuevo horario para la segunda jornada de pelicula: ");
-                        theaterOptions(secondPanel, input, panelCC, panelCentral, frame);
-
-                    });
-                    spots.addActionListener((ActionEvent e2) -> {
-
-                        secondPanel.removeAll();
-
-                        JLabel input = new JLabel("Introduzca la cantidad de spots disponibles para la sala (Maximo 30)");
-                        theaterOptions(secondPanel, input, panelCC, panelCentral, frame);
-
-                    });
-                    updateWindiow(frame);
-
-                });
+                if (gestion.equals("IMAX")) {
+                    sala = "IMAX";
+                    theaterRooms(sala, panelCSS, panelCSI, panelCS, panelCentral, firstPanel, secondPanel, thirdPanel, panelCC, imax, register, frame);
+                } else if (gestion.equals("VIP")) {
+                    sala = "VIP";
+                    theaterRooms(sala, panelCSS, panelCSI, panelCS, panelCentral, firstPanel, secondPanel, thirdPanel, panelCC, vip, register, frame);
+                } else {
+                    JOptionPane.showMessageDialog(null, "La informacion introducida no es correcta");
+                }
 
                 updateWindiow(frame);
 
@@ -1368,6 +1201,19 @@ public class SistemaDeReservas {
             updateWindiow(frame);
 
         });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
         bInfo.addActionListener((ActionEvent e) -> {
 
@@ -1689,14 +1535,6 @@ public class SistemaDeReservas {
 
             panelCentral.add(panelCC);
 
-            confirmationButton.addActionListener((ActionEvent e1) -> {
-//                String texto = textField.getText();
-//                Baile.removeEmployee(texto);
-//                textField.setText("");
-
-                updateWindiow(frame);
-            });
-
             updateWindiow(frame);
 
         });
@@ -1728,25 +1566,60 @@ public class SistemaDeReservas {
 
     }
 
-    public static void theaterOptions(JPanel secondPanel, JLabel input, JPanel panelCC, JPanel panelCentral, JFrame frame) {
-        JTextField textFieldName = new JTextField(25);
+    public static void theaterOptions(JPanel secondPanel, JLabel input, JPanel panelCC, JPanel panelCentral, JFrame frame, Theater sala, String selection) {
+        JTextField textField = new JTextField(25);
         JButton confirmationButton = new JButton("Confirmar");
         JButton[] bConfirmation = {confirmationButton};
         setButtons(bConfirmation);
 
         secondPanel.add(input);
-        secondPanel.add(textFieldName);
+        secondPanel.add(textField);
         secondPanel.add(confirmationButton);
         secondPanel.add(input);
-        secondPanel.add(textFieldName);
+        secondPanel.add(textField);
         secondPanel.add(confirmationButton);
 
         panelCC.add(secondPanel);
 
         panelCentral.add(panelCC);
+                
+        
+        confirmationButton.addActionListener((ActionEvent e1) -> {
+            String texto = textField.getText();
+                        
+            switch (selection) {
+                case "1" -> sala.movieOne = texto;
+                case "2" -> sala.movieTwo = texto;
+                case "3" -> sala.schecudleOne = texto;
+                case "4" -> sala.scheduleTwo = texto;
+                case "5" -> sala.spots = texto;
+            }
+            
+            
+                        sala.settingsView();
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            textField.setText("");
+
+            updateWindiow(frame);
+        });
 
         updateWindiow(frame);
-
+        
     }
 
     public static void theaterOptionsTwo(JPanel firstPanel, JLabel input, JPanel panelCC, JPanel panelCentral, JFrame frame) {
@@ -1788,11 +1661,243 @@ public class SistemaDeReservas {
         frame.revalidate();
         frame.repaint();
     }
-    
-    public static void panelsSize (JPanel firstPanel, JPanel secondPanel, JPanel thirdPanel) {
-                            firstPanel.setPreferredSize(new Dimension(800, 160));
-                    firstPanel.setBorder(new EmptyBorder(30, 30, 0, 0));
-                    secondPanel.setPreferredSize(new Dimension(750, 130));
-                    thirdPanel.setPreferredSize(new Dimension(800, 150));
+
+    public static void panelsSize(JPanel firstPanel, JPanel secondPanel, JPanel thirdPanel) {
+        firstPanel.setPreferredSize(new Dimension(800, 160));
+        firstPanel.setBorder(new EmptyBorder(30, 30, 0, 0));
+        secondPanel.setPreferredSize(new Dimension(750, 130));
+        thirdPanel.setPreferredSize(new Dimension(800, 150));
     }
+
+    public static void theaterRooms(String theater, JPanel panelCSS, JPanel panelCSI, JPanel panelCS, JPanel panelCentral, JPanel firstPanel, JPanel secondPanel, JPanel thirdPanel, JPanel panelCC, Theater sala, Vector<Vector<String>> register, JFrame frame) {
+
+        String tituloCine = "Bienvenidos a la seccion de reservacion y configuraciones relacionadas a la sala " + theater + "\n" + ""
+                + "En este apartado especial seras capaz de asignar espacios disponibles a empleados y modificar ajustes. \nPor favor selecciona la opcion que deseas realizar\n";
+
+        JLabel titulo = new JLabel("<html>" + tituloCine.replace("\n", "<br>") + "<html>");
+        titulo.setHorizontalAlignment(SwingConstants.CENTER);
+        titulo.setVerticalAlignment(SwingConstants.CENTER);
+
+        panelCSS.add(titulo);
+
+        panelCSS.add(titulo);
+
+        JButton buttonA = new JButton("Crear Reservacion");
+        JButton buttonM = new JButton("Modificar Informacion");
+
+        JButton[] buttonsCine = {buttonA, buttonM};
+
+        setButtons(buttonsCine);
+
+        panelCSI.add(buttonA);
+        panelCSI.add(buttonM);
+
+        panelCS.add(panelCSS, BorderLayout.CENTER);
+        panelCS.add(panelCSI, BorderLayout.SOUTH);
+
+        panelCentral.add(panelCS, BorderLayout.NORTH);
+
+        panelsSize(firstPanel, secondPanel, thirdPanel);
+
+        buttonA.addActionListener((ActionEvent e1) -> {
+
+            panelCC.removeAll();
+            firstPanel.removeAll();
+
+            panelsSize(firstPanel, secondPanel, thirdPanel);
+
+            firstPanel.setPreferredSize(new Dimension(600, 150));
+            secondPanel.setPreferredSize(new Dimension(450, 300));
+            secondPanel.setBackground(Color.BLUE);
+            thirdPanel.setPreferredSize(new Dimension(450, 300));
+            thirdPanel.setBackground(Color.red);
+
+            JLabel inputID = new JLabel("Introduzca el ID del empleado: ");
+            JTextField textFieldOne = new JTextField(25);
+            JLabel inputSpot = new JLabel("Indique el spot que desea reservar: ");
+            JTextField textFieldTwo = new JTextField(25);
+            JButton confirmationButton = new JButton("Actualizar");
+            JButton[] bConfirmation = {confirmationButton};
+            setButtons(bConfirmation);
+
+            firstPanel.add(inputID);
+            firstPanel.add(textFieldOne);
+            firstPanel.add(inputSpot);
+            firstPanel.add(textFieldTwo);
+            firstPanel.add(confirmationButton);
+
+            String preview = sala.view();
+
+            JLabel movieTitle = new JLabel(sala.movieOne);
+            JLabel spots = new JLabel("<html>" + preview.replace("\n", "<br>") + "<html>");
+
+            spots.setFont(new Font("Arial", Font.PLAIN, 18));
+            movieTitle.setFont(new Font("Arial", Font.PLAIN, 18));
+            movieTitle.setPreferredSize(new Dimension(850, 30));
+            movieTitle.setHorizontalAlignment(SwingConstants.CENTER);
+
+            secondPanel.add(movieTitle);
+            secondPanel.add(spots);
+
+            panelCC.add(firstPanel);
+            panelCC.add(secondPanel);
+            panelCC.add(thirdPanel);
+
+            panelCentral.add(panelCC);
+
+            confirmationButton.addActionListener((ActionEvent e2) -> {
+
+                secondPanel.removeAll();
+
+                String textoOne = textFieldOne.getText();
+                String textoTwo = textFieldTwo.getText();
+                sala.reservation(register, textoOne, textoTwo);
+                String view = sala.reservation(register, textoOne, textoTwo);
+                textFieldOne.setText("");
+                textFieldTwo.setText("");
+
+                JLabel movieTitleOne = new JLabel(sala.movieOne);
+                JLabel updatedSpots = new JLabel("<html>" + view.replace("\n", "<br>") + "<html>");
+
+                updatedSpots.setFont(new Font("Arial", Font.PLAIN, 18));
+                movieTitleOne.setFont(new Font("Arial", Font.PLAIN, 18));
+                movieTitleOne.setPreferredSize(new Dimension(850, 30));
+                movieTitleOne.setHorizontalAlignment(SwingConstants.CENTER);
+
+                String set = "";
+
+                for (Vector<String> reservedList : sala.reservedList) {
+                    System.out.println(reservedList);
+                    set += reservedList.get(0) + " / " + reservedList.get(2) + "\n";
+                }
+
+                if (!(set == null)) {
+
+                    JLabel spotsB = new JLabel("<html>" + set.replace("\n", "<br>") + "<html>");
+
+                    thirdPanel.add(spotsB);
+                }
+
+                secondPanel.add(movieTitleOne);
+                secondPanel.add(updatedSpots);
+
+                panelCC.add(firstPanel);
+                panelCC.add(secondPanel);
+                panelCC.add(thirdPanel);
+
+                panelCentral.add(panelCC);
+
+                updateWindiow(frame);
+            });
+
+            updateWindiow(frame);
+
+        });
+        
+        
+        
+        
+        
+        
+        
+
+        buttonM.addActionListener((ActionEvent e1) -> {
+
+            panelCC.removeAll();
+            firstPanel.removeAll();
+
+            panelsSize(firstPanel, secondPanel, thirdPanel);
+
+            firstPanel.setPreferredSize(new Dimension(500, 200));
+
+            JButton movieOne = new JButton("Pelicula 1");
+            JButton movieTwo = new JButton("Pelicula 2");
+            JButton scheduleOne = new JButton("Horario 1");
+            JButton scheduleTwo = new JButton("Horario 2");
+            JButton spots = new JButton("Spots");
+
+            String text1 = """
+                                         Perfecto, estas en la seccion para la modificacion de configuraciones
+                                               En este segmento lograras localizar las distintas opciones 
+                                   que son disponibles de ajustar
+                                   
+                                         """;
+
+            JLabel titulo1 = new JLabel("<html>" + text1.replace("\n", "<br>") + "<html>");
+            
+                        sala.settingsView();
+
+
+            firstPanel.add(titulo1);
+            firstPanel.add(movieOne);
+            firstPanel.add(movieTwo);
+            firstPanel.add(scheduleOne);
+            firstPanel.add(scheduleTwo);
+            firstPanel.add(spots);
+
+            JButton[] buttonsMCine = {movieOne, movieTwo, scheduleOne, scheduleTwo, spots};
+
+            setButtons(buttonsMCine);
+
+            panelCC.add(firstPanel);
+            panelCentral.add(panelCC);
+
+            movieOne.addActionListener((ActionEvent e2) -> {
+                
+                String selection = "1";
+
+                secondPanel.removeAll();
+
+                JLabel input = new JLabel("Introduzca el titulo de la pelicula que sera transmitida en la primer jornada: ");
+                theaterOptions(secondPanel, input, panelCC, panelCentral, frame, sala, selection);            
+                
+
+            });
+            movieTwo.addActionListener((ActionEvent e2) -> {
+                
+                String selection = "2";
+
+                secondPanel.removeAll();
+
+                JLabel input = new JLabel("Introduzca el titulo de la pelicula que sera transmitida en la segunda jornada: ");
+
+                theaterOptions(secondPanel, input, panelCC, panelCentral, frame, sala, selection);            
+
+            });
+            scheduleOne.addActionListener((ActionEvent e2) -> {
+
+                String selection = "3";
+
+                secondPanel.removeAll();
+
+                JLabel input = new JLabel("Introduzca el nuevo horario para la primer jornada de pelicula: ");
+                theaterOptions(secondPanel, input, panelCC, panelCentral, frame, sala, selection);            
+
+            });
+            scheduleTwo.addActionListener((ActionEvent e2) -> {
+
+                String selection = "4";
+
+                secondPanel.removeAll();
+
+                JLabel input = new JLabel("Introduzca el nuevo horario para la segunda jornada de pelicula: ");
+                theaterOptions(secondPanel, input, panelCC, panelCentral, frame, sala, selection);            
+
+            });
+            spots.addActionListener((ActionEvent e2) -> {
+
+                String selection = "5";
+
+                secondPanel.removeAll();
+
+                JLabel input = new JLabel("Introduzca la cantidad de spots disponibles para la sala (Maximo 30)");
+                theaterOptions(secondPanel, input, panelCC, panelCentral, frame, sala, selection);            
+
+            });
+            updateWindiow(frame);
+
+        });
+    }
+    
+  
 }
