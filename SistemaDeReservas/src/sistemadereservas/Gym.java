@@ -48,21 +48,32 @@ public class Gym {
                 
                 if (!(option.equals("") || option == null)) {
                     if (register.get(i).contains(option) && !(bookedList.contains(register.get(i).get(1)))) {
+                        
+                        String schedule = reservarConEntrenador();
+                        
+                        if (schedule == null || schedule.equals("")) {
+                            JOptionPane.showMessageDialog(null, "La informacion no es valida");
+                            return false;
+                        }
+                        
                     employeeName = register.get(i).get(0);
                     String employeeId = register.get(i).get(1);
                     reservationSet.add(employeeName);
                     reservationSet.add(employeeId);
+                    reservationSet.add(schedule);
                     bookedList.add(employeeId);
                     
                     reservationList.add(reservationSet);
+                        System.out.println(reservationList);
 
-                    JOptionPane.showMessageDialog(null, "Estudiante agregado a la clase: " + employeeName);
+                    JOptionPane.showMessageDialog(null, "Estudiante agregado a la clase: " + employeeName+" a las "+schedule);
                     return true;
                     }
                 }
             }
 
         }
+        JOptionPane.showMessageDialog(null, "Verifique la informacion o revise si el empleado ya cuenta con una reservacion");
         return false;
     }
 
@@ -73,19 +84,31 @@ public class Gym {
     }
 
     // Clase para cancelar la inscripción de un estudiante
-    public boolean eliminarEstudiante() {
+    public boolean eliminarEstudiante(String text) {
         if (espaciosOcupados > 0) {
             espaciosOcupados--;
-            System.out.println("Estudiante eliminado de la clase de " + tipoClase + ". Espacios utilizados: " + espaciosOcupados);
-            return true;
+            
+            String option = text;
+            
+            for (Vector<String> set : reservationList) {
+                if (set.get(1).equals(option)) {
+                    
+                    JOptionPane.showMessageDialog(null, "Reservacion removida satisfactoriamente\n\n"+"Nombre: "+set.get(0)+"\nMomento de reserva: "+set.get(2));
+                    reservationList.remove(set);
+                    return true;
+
+                }
+            }
+            
+            
         } else {
-            System.out.println("No hay estudiantes para eliminar en la clase: " + tipoClase);
-            return false;
+            JOptionPane.showMessageDialog(null, "No hay estudiantes para eliminar en la clase: " + tipoClase);
         }
+        return false;
     }
 
     // Clase para reservar un horario con el entrenador personal
-    public void reservarConEntrenador() {
+    public String reservarConEntrenador() {
         // Mostrar horarios disponibles
         StringBuilder horariosDisponibles = new StringBuilder("Horarios disponibles:\n");
         for (int i = 0; i < HORARIOS.length; i++) {
@@ -103,10 +126,10 @@ public class Gym {
             if (HORARIOS[i].equals(horario)) {
                 if (disponibilidadHorarios[i]) {
                     disponibilidadHorarios[i] = false;
-                    System.out.println("Reserva exitosa con el entrenador a las " + horario);
+                    JOptionPane.showMessageDialog(null, "Reserva exitosa con el entrenador a las " + horario);
                     reservado = true;
                 } else {
-                    System.out.println("El horario " + horario + " ya está reservado. Intente con otro horario.");
+                    JOptionPane.showMessageDialog(null, "El horario " + horario + " ya está reservado. Intente con otro horario.");
                 }
                 break;
             }
@@ -114,8 +137,9 @@ public class Gym {
 
         // Validación en caso de horario inválido o no encontrado
         if (!reservado) {
-            System.out.println("El horario no está disponible o es inválido. Intente de nuevo.");
+            JOptionPane.showMessageDialog(null, "El horario no está disponible o es inválido. Intente de nuevo.");
         }
+        return horario;
     }
 
     // Getter para obtener el tipo de clase
